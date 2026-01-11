@@ -23,3 +23,7 @@ is-terminal = "0.4"
 uuid = { version = "1.10", features = ["v4", "fast-rng", "macro-diagnostics"] }
 ratatui = "0.29.0"
 crossterm = "0.28.1"
+
+[[bin]]
+name = "flow"
+path = "src/main.rs"
