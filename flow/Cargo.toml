@@ -1,5 +1,6 @@
 [package]
-name = "flow"
+name = "flowprompt-cli"
+default-run = "flow"
 version = "1.0.0"
 edition = "2021"
 description = "A terminal-based tool designed to manage, categorize, and inject variables into LLM prompts."
