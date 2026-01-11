@@ -1,0 +1,24 @@
+[package]
+name = "flow"
+version = "1.0.0"
+edition = "2021"
+description = "A terminal-based tool designed to manage, categorize, and inject variables into LLM prompts."
+authors = ["Pranav Dwivedi"]
+license = "MIT"
+repository = "https://github.com/pronzzz/flowprompt"
+keywords = ["cli", "prompt-engineering", "llm", "tui", "productivity"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+dialoguer = "0.11"
+skim = "0.10"
+arboard = "3.4"
+regex = "1.10"
+dirs = "5.0"
+is-terminal = "0.4"
+uuid = { version = "1.10", features = ["v4", "fast-rng", "macro-diagnostics"] }
+ratatui = "0.29.0"
+crossterm = "0.28.1"
