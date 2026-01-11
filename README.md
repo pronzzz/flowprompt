@@ -1,5 +1,8 @@
 # FlowPrompt
 
+[![Crates.io](https://img.shields.io/crates/v/flowprompt-cli.svg)](https://crates.io/crates/flowprompt-cli)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+
 ```text
 ███████╗██╗      ██████╗ ██╗    ██╗██████╗ ██████╗  ██████╗ ███╗   ███╗██████╗ ████████╗
 ██╔════╝██║     ██╔═══██╗██║    ██║██╔══██╗██╔══██╗██╔═══██╗████╗ ████║██╔══██╗╚══██╔══╝
@@ -20,11 +23,18 @@ Manage your prompts locally, pipe code directly into templates, and copy the res
 -   **Pipe-First Workflow**: `cat file.rs | flow use refactor` automatically fills `{{input}}`.
 -   **Interactive TUI**: A "fun mode" dashboard (`flow ui`) to browse and select prompts with style.
 -   **Smart Variables**: Automatically detects {{variables}} and prompts you for them interactively.
--   **Fuzzy Search**: integrated `flow search` for when you forget prompt aliases.
+-   **Fuzzy Search**: Integrated `flow search` for when you forget prompt aliases.
 -   **Local & Private**: 100% local JSON storage (`~/.config/flowprompt/prompts.json`).
 -   **Clipboard Integration**: Output loops directly to your system clipboard (or stdout with `--print`).
 
 ## 📦 Installation
+
+### From crates.io (Recommended)
+You can install FlowPrompt directly via Cargo:
+
+```bash
+cargo install flowprompt-cli
+```
 
 ### From Source
 
@@ -46,20 +56,6 @@ Refining your prompts is key. Save them once, use them forever.
 flow add
 ```
 
-*   **Alias**: `refactor`
-*   **Description**: `Refactor code for readability`
-*   **Template**: (Opens your default $EDITOR)
-
-```markdown
-You are a Senior Developer. Refactor the following {{language}} code:
-
-```
-{{input}}
-```
-
-Explain your changes.
-```
-
 ### 2. The Dashboard (`flow ui`)
 
 Launch the interactive TUI to browse your collection.
@@ -68,23 +64,13 @@ Launch the interactive TUI to browse your collection.
 flow ui
 ```
 
-*   **Navigation**: `Up/Down` arrows.
-*   **Select**: `Enter` to use the prompt.
-*   **Quit**: `q` or `Esc`.
-
 ### 3. Quick Use (`flow use`)
 
 **The Power Move**: Pipe content directly into a prompt.
 
 ```bash
-# Refactor a specific file
 cat src/main.rs | flow use refactor
-
-# Analyze a git diff
-git diff | flow use summarize_changes
 ```
-
-If the template has variables like `{{language}}` that represent missing info, FlowPrompt will verify and ask you for them interactively.
 
 ### 4. Search (`flow search`)
 
@@ -96,7 +82,7 @@ flow search
 
 ## 📂 Configuration
 
-Prompts are stored in `~/.config/flowprompt/prompts.json`. You can edit this file manually or sync it across machines.
+Prompts are stored in `~/.config/flowprompt/prompts.json`.
 
 ## 🤝 Contributing
 
@@ -104,4 +90,4 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
